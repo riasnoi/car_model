@@ -1,0 +1,303 @@
+@font-face
+{
+ font-family: Montserrat;
+ src: url("Montserrat-Medium.ttf");
+}
+
+header{
+    display: inline-flex;
+}
+
+.menu{
+    margin: 0;
+    display: grid;
+    grid-template-columns: 4fr 6fr;
+    /*margin-left: 4%;*/
+    /*background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+    backdrop-filter: blur(4px);*/
+    /*padding-top: 10px;*/
+}
+
+ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.menu_elems{
+    display: inline-flex;
+
+    /*inline-size: 200px;*/
+}
+
+
+
+.a{
+    font-family: Montserrat;
+    font-size: 24px;
+    outline: none;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+body{
+    /*background-image: url(data.svg);*/
+    background-image: url(type.svg);
+    background-size: cover;
+    background-position: center;
+    /*background-size: contain;*/
+    background-repeat: no-repeat;
+    background-attachment: fixed;  
+
+  /* Автоматическое размещение в колонку */
+}
+
+
+main{
+    grid-area: "main";
+    background-image: url(background.svg);
+    background-size: cover;
+    background-position: center;
+    /*background-size: contain;*/
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+/* Note: backdrop-filter has minimal browser support */
+    border-radius: 40px;
+    margin: 15px;
+    margin-right: 40px;
+    margin-left: 40px;
+    padding-bottom: 25x;
+    display: grid;
+    grid-template-columns:  1fr 4fr 1fr;
+  /* Автоматическое размещение в колонку */
+
+}
+
+.space{
+    width: 100%;
+    background-image: url(Portal.svg);
+    background-size: 2.5vw;
+    background-repeat: no-repeat;
+    background-position-x: 80%;
+    background-position-y: 4%;
+}
+
+#space2{
+    background-position-x: 20%;
+    background-position-y: 96%;
+}
+
+/*#back{
+    background-image: url(line_enter.svg);
+    background-repeat: no-repeat;
+    background-position-y: 10%;
+    background-position-x: 35%;
+    background-size: 60vw;
+}*/
+
+#enter_your_data{
+    font-family: Montserrat;
+    font-size: 4.6vw;
+    /*font-size: 96px;*/
+    color: #FFFFFF;
+    margin-bottom: 0px;
+    padding-bottom: 0;
+}
+
+.restangle{
+    background: linear-gradient(73.83deg, rgba(88, 239, 255, 0.15) 0.42%, rgba(88, 239, 255, 0) 99.52%);
+    border: 1px solid #FFFFFF;
+    backdrop-filter: blur(15px);
+/* Note: backdrop-filter has minimal browser support */
+    border-radius: 30px;
+    width: 100%;
+    margin-top: 10px;
+
+}
+
+.grid{
+    height: 31vw;
+    overflow-y: scroll;
+    margin: 35px;
+    /*display: grid;
+    grid-template-columns:  70% 30%;
+    grid-template-areas:
+    "data_name input"*/
+}
+
+.element{
+    display: grid;
+    grid-template-columns:  7fr 3fr;
+  /* Автоматическое размещение в колонку */
+    grid-template-areas:
+    "data_name input";
+    padding: 17px;
+    background-position: center;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.5) 0%, rgba(22, 158, 255, 0.15) 100%);
+    border-radius: 15px;
+    margin-bottom: 10px;
+    
+
+}
+
+/*#back{
+    background-image: url(line.svg);
+    background-repeat: no-repeat;
+    background-position-x:  85%;
+    background-position-y: 10%;
+    background-size: 40vw;
+}*/
+
+.regular_text{
+    color: #FFFFFF;
+    margin-left: 30px;
+    font-family: Montserrat;
+    font-size: 2vw;
+    grid-area: "data_name";
+}
+
+.input_text{
+    font-family: Montserrat;
+    font-size: 36px;
+    color: rgba(177, 207, 244, 0.5);
+    grid-area: "input";
+}
+
+.input{
+    align-content: center;
+}
+
+
+::placeholder {
+    font-family: Montserrat;
+    font-size: 2vw;
+    color: rgba(177, 207, 244, 0.5);
+    
+}
+
+input[type=text] {
+    border: none;
+    background: none;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    height: 2vw;
+    width: 100%;
+    align-content: center;
+    font-family: Montserrat;
+    font-size: 2vw;
+    color:#FFFFFF;
+
+}
+
+
+input[type=text]:focus::placeholder {
+    color: #FFFFFF;
+    
+}
+
+input[type=text]:hover::placeholder {
+    color: #FFFFFF;
+}
+
+input[type=text]:hover, :focus {
+    outline: 0;
+}
+
+.grid {
+    scrollbar-width: 1px;
+    scrollbar-color: #8FD0FF #ffff;
+    border-radius: 5px;
+}
+
+.analyze{
+    outline: none;
+    text-decoration: none;
+    font-family: Montserrat;
+    font-size: 4.6vw;
+    /*font-size: 96px;*/
+    border: none;
+    outline: none;
+    background: none;
+    color: #FFFFFF;
+}
+
+#analyze{
+    position: relative;
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+button:hover, :focus{
+    color: #8FD0FF;
+}
+
+select.input_select{
+    background: none;
+    font-family: Montserrat;
+    font-size: 2vw;
+    color: rgba(177, 207, 244, 0.5);
+    border: none;
+}
+
+select.input_select:hover, :focus{
+    color: #FFFFFF;
+    background-color: #021842;
+    border-radius: 10px;
+
+}
+
+
+
+/*footer{
+    grid-area: "footer";
+    height: 100%;
+    text-align: right;
+    position: relative;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+}
+
+.bar{
+    margin: 0;
+}*/
+
+.bar_elems{
+    font-family: Montserrat;
+    font-size: 24px;
+    outline: none;
+    text-decoration: none;
+    color: #FFFFFF;
+    padding-left: 40px;
+
+}
+
+
+.bar{
+    position: relative;
+    display: inline-flex;
+    margin-right: 100px;
+}
+
+#footer{
+    margin-right: 40px;
+    text-align: right;
+}
+
+footer{
+    text-align: right;
+}
+
+.footer_elems{
+    display: inline-flex;
+    font-family: Montserrat;
+    font-size: 24px;
+    color: #FFFFFF;
+    padding-left: 1%;
+
+}
+
+::-webkit-scrollbar {
+    width: 0;
+  }

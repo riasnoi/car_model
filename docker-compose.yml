@@ -1,0 +1,26 @@
+
+services:
+  flask:
+    # Путь до Dockerfile
+    build: ./project
+    # Имя для создаваемого контейнера
+    container_name: new_flask_model
+    # Создание переменных окружения в контейнере
+    environment:
+      # для отладки (при запуске в релиз убрать!)
+      - FLASK_ENV=development
+      - PYTHONUNBUFFERED=True                   
+      ##
+    # Перезапускаем сервис в случае падения 
+    restart: on-failure
+    volumes:
+      - ./project:/project
+    ports:
+      - "80:80"
+    command: python3 main.py
+
+networks:
+  default:
+    driver: bridge
+    driver_opts:
+      com.docker.network.driver.mtu: 1450

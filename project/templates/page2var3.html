@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ru"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI vehicles diagnostics</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='page2var3style.css') }}">
+</head>
+<body>
+    <header>
+        <a class="bar_elems" href="{{ url_for('main_pg') }}">AI</a>
+        <a class="bar_elems" href="/">About us</a>
+        <a class="bar_elems" href="/">Q&A</a>
+    </header>
+    <div id="back">
+        <main>
+            <div class="space"></div>
+            <div id="all">
+                <span id="enter_your_data">Enter your data</span>
+                <form action="{{ url_for('predict') }}" method="POST" class="input_form">
+                <div class="restangle">
+                    <div class="grid">
+                        <!--Вот тут контейнеры с данными которые нужно получать для нейронки-->
+                        <div class="element">
+                            <div class="data_name">
+                                <span class="regular_text">battery voltage</span>
+                            </div>
+                            <div class="input">
+                                <!--параметр battery voltage, в action вставить имя фласк файла-->
+                                <input id="battery_voltage" name="battery_voltage" type="text" placeholder="type here...">
+                            </div>
+                        </div>
+    
+                        <div class="element">
+                            <div class="data_name">
+                                <span class="regular_text">battery current</span>
+                            </div>
+                            <div class="input">
+                                <!--параметр battery current, в action вставить имя фласк файла-->
+                                <input id="battery_current" name="battery_current" type="text" placeholder="type here...">
+                            </div>
+                        </div>
+    
+                        <div class="element">
+                            <div class="data_name">
+                                <span class="regular_text">engine temperature</span>
+                            </div>
+                            <div class="input">
+                                <!--параметр engine temperature, в action вставить имя фласк файла-->
+                                <input id="engine_temperature" name="engine_temperature" type="text" placeholder="type here...">
+                            </div>
+                        </div>
+    
+                        <div class="element">
+                            <div class="data_name">
+                                <span class="regular_text">motor efficiency</span>
+                            </div>
+                            <div class="input">
+                                <!--параметр motor efficiency, в action вставить имя фласк файла-->
+                                <input id="motor_efficiency" name="motor_efficiency" type="text" placeholder="type here...">
+                            </div>
+                        </div>
+                        
+                        <div class="element">
+                            <div class="data_name">
+                                <span class="regular_text">fuel efficiency</span>
+                            </div>
+                            <div class="input">
+                                <!--параметр fuel efficiency, в action вставить имя фласк файла-->
+                                <input id="fuel_efficiency" name="fuel_efficiency" type="text" placeholder="type here...">
+                            </div>
+                        </div>
+
+                        <div class="element">
+                            <div class="data_name">
+                                <span class="regular_text">tire pressure</span>
+                            </div>
+                            <div class="input">
+                                <!--параметр tire pressure, в action вставить имя фласк файла-->
+                                <input id="tire_pressure" name="tire_pressure" type="text" placeholder="type here...">
+                            </div>
+                        </div>
+    
+                        <div class="element">
+                            <div class="data_name">
+                                <span class="regular_text">speed</span>
+                            </div>
+                            <div class="input">
+                                <!--параметр speed, в action вставить имя фласк файла-->
+                                <input id="speed" name="speed" type="text" placeholder="type here...">
+                            </div>
+                        </div>
+
+                        <div class="element">
+                            <div class="data_name">
+                                <span class="regular_text">acceleration</span>
+                            </div>
+                            <div class="input">
+                                <!--параметр acceleration, в action вставить имя фласк файла-->
+                                <input id="acceleration" name="acceleration" type="text" placeholder="type here...">
+                            </div>
+                        </div>
+
+                        <div class="element">
+                            <div class="data_name">
+                                <span class="regular_text">driving distance</span>
+                            </div>
+                            <div class="input">
+                                <!--параметр driving distance, в action вставить имя фласк файла-->
+                                <input id="driving_distance" name="driving_distance" type="text" placeholder="type here...">
+                            </div>
+                        </div>
+
+                        <div class="element">
+                            <div class="data_name">
+                                <span class="regular_text">ambient temperature</span>
+                            </div>
+                            <div class="input">
+                                <!--параметр ambient temperature, в action вставить имя фласк файла-->
+                                <input id="ambient_temperature" name="ambient_temperature" type="text" placeholder="type here...">
+                            </div>
+                        </div>
+                        
+
+                        <div class="element">
+                            <div class="data_name">
+                                <span class="regular_text">humidity</span>
+                            </div>
+                            <div class="input">
+                                <!--параметр humidity, в action вставить имя фласк файла-->
+                                <input id="humidity" name="humidity" type="text" placeholder="type here...">
+                            </div>
+                        </div>
+                        
+                        <div class="element">
+                            <div class="data_name">
+                                <span class="regular_text">road condition</span>
+                            </div>
+                            <div class="input">
+                                <!--параметр road condition, в action вставить имя фласк файла-->
+                                <select id="road_condition" name="road_condition" class="input_select">
+                                    <option value="">choose the most frequent</option>
+                                    <option value="0">Bumpy</option>
+                                    <option value="1">Hilly</option>
+                                    <option value="2">Smooth</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="element">
+                            <div class="data_name">
+                                <span class="regular_text">last service distance</span>
+                            </div>
+                            <div class="input">
+                                <!--параметр last service distance, в action вставить имя фласк файла-->
+                                <input id="last_service_distance" name="last_service_distance" type="text" placeholder="type here...">
+                            </div>
+                        </div>
+
+                        <div class="element">
+                            <div class="data_name">
+                                <span class="regular_text">service frequency</span>
+                            </div>
+                            <div class="input">
+                                <!--параметр service frequency, в action вставить имя фласк файла-->
+                                <input id="service_frequency" name="service_frequency" type="text" placeholder="type here...">
+                            </div>
+                        </div>
+
+                        <div class="element">
+                            <div class="data_name">
+                                <span class="regular_text">repair cost</span>
+                            </div>
+                            <div class="input">
+                                <!--параметр repair cost, в action вставить имя фласк файла-->
+                                <input id="repair_cost" name="repair_cost" type="text" placeholder="type here...">
+                            </div>
+                        </div>
+
+                        <div class="element">
+                            <div class="data_name">
+                                <span class="regular_text">downtime</span>
+                            </div>
+                            <div class="input">
+                                <!--параметр downtime, в action вставить имя фласк файла-->
+                                <input id="downtime" name="downtime" type="text" placeholder="type here...">
+                            </div>
+                        </div>
+                        
+                        <div class="element">
+                            <div class="data_name">
+                                <span class="regular_text">time since last fault</span>
+                            </div>
+                            <div class="input">
+                                <!--параметр time since last fault, в action вставить имя фласк файла-->
+                                <input id="time_since_last_fault" name="time_since_last_fault" type="text" placeholder="type here...">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="analyze">
+                    <!--насколько помню, с кнопкой в беке тоже надо чет делать-->
+                    <button class="analyze" type="submit">Analyze</button>
+                </div>
+            </form>
+                
+
+            </div>
+            <div class="space" id="space2"></div>
+        </main>
+    </div>
+
+    <footer>
+        <div class="bar" id="footer">
+            <a class="bar_elems">Donstu</a>
+            <a class="bar_elems">T-univertsity</a>
+            <a class="bar_elems">2024</a>
+        </div>
+    </footer>
+</body>

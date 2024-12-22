@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI vehicles diagnostics</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style3.css') }}">
+</head>
+<body>
+    <header>
+            <a class="bar_elems" href="#">AI</a>
+            <a class="bar_elems" href="#">About us</a>
+            <a class="bar_elems" href="#">Q&A</a>
+    </header>
+    <main>
+        <div class="main">
+            <div class="all">
+                <div class="stroke1">
+                    <div class="text_container">
+                        <div class="big"><span>AI<br> vehicles<br> diagnostics</span></div>
+                        <div class="text_regular" >
+                            <span>This project is created for fault prediction and maintenance optimization in New Energy Vehicles based on the input data.</span>
+                        </div>
+                    </div>
+                    <div class="image_container">
+                        <span class="text_regular" id="text1">image generated result</span>
+                    </div>
+                </div>
+                <div class="stroke1">
+                    <div class="image_container1"><span class="text_regular" id="text1">accurate predictions</span></div>
+    
+                    <div class="text_container1">
+                        
+                        <div class="text_regular">
+                            <span>This project leverages artificial intelligence to predict faults in vehicles, focusing on critical components of New Energy Vehicles (NEVs). By analyzing sensor data, operational parameters, and historical failure patterns, the system identifies potential malfunctions before they occur.</span>
+                        </div>
+                        <!--Вот сюда вставить ссылку на page2var3-->
+                        <div class="big1" id="bottom"><a id="try_analyzing" href="{{ url_for('start_page') }}">Try<br>AI analytics</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </main>
+    <footer>
+        <div class="bar">
+            <a class="bar_elems" >Donstu</a>
+            <a class="bar_elems" >T-university</a>
+            <a class="bar_elems" >2024</a>
+        </div>
+    </footer>
+</body>

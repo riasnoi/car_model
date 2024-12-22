@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI vehicles diagnostics</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='engineoverheatingstyle.css') }}">
+</head>
+<body>
+    <header>
+            <a class="bar_elems" href="{{ url_for('main_pg') }}">AI</a>
+            <a class="bar_elems" href="#">About us</a>
+            <a class="bar_elems" href="#">Q&A</a>
+    </header>
+    <main>
+
+        <div class="row1">
+            <div>
+                <div class="big"><span>Result</span></div>
+                <div class="big" id="issue"><span>Engine overheating</span></div>
+            </div>
+            <div class="text_regular" >
+                <span>Based on analysis of your vehicle's data, our AI system suggests a potential future problem with your electric vehicle's engine cooling system, potentially leading to overheating. This could potentially lead to symptoms such as unusual engine noises, reduced performance, overheating warning lights, steam or smoke from the engine compartment. <br>While our AI is highly accurate, it's crucial to remember that these are predictions and not definitive diagnoses. We strongly advise you to schedule a service appointment for a thorough inspection of your engine cooling system to verify this prediction and address any potential issues before they cause more significant damage.</span>
+            </div>
+            <!--Вот сюда вставить ссылку на page2var3-->
+            <div class="big" id="bottom"><a id="try_analyzing" href="{{ url_for('start_page') }}">Try again</a></div>
+        </div>
+        <div class="row2">
+                
+        </div>
+
+    </main>
+    <footer>
+        <div class="bar">
+            <a class="bar_elems" >Donstu</a>
+            <a class="bar_elems" >T-university</a>
+            <a class="bar_elems" >2024</a>
+        </div>
+    </footer>
+</body>

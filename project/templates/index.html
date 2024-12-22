@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wine Predictor</title>
+</head>
+<body>
+    <h1>Wine Class Predictor</h1>
+    <form action="{{ url_for('predict') }}" method="POST">
+        <label for="alcohol">Alcohol:</label>
+        <input type="text" id="alcohol" name="alcohol" required><br><br>
+
+        <label for="malic_acid">Malic Acid:</label>
+        <input type="text" id="malic_acid" name="malic_acid" required><br><br>
+
+        <label for="ash">Ash:</label>
+        <input type="text" id="ash" name="ash" required><br><br>
+
+        <label for="alcalinity_of_ash">Alcalinity of Ash:</label>
+        <input type="text" id="alcalinity_of_ash" name="alcalinity_of_ash" required><br><br>
+
+        <label for="magnesium">Magnesium:</label>
+        <input type="text" id="magnesium" name="magnesium" required><br><br>
+
+        <label for="total_phenols">Total Phenols:</label>
+        <input type="text" id="total_phenols" name="total_phenols" required><br><br>
+
+        <label for="flavanoids">Flavanoids:</label>
+        <input type="text" id="flavanoids" name="flavanoids" required><br><br>
+
+        <label for="nonflavanoid_phenols">Nonflavanoid Phenols:</label>
+        <input type="text" id="nonflavanoid_phenols" name="nonflavanoid_phenols" required><br><br>
+
+        <label for="proanthocyanins">Proanthocyanins:</label>
+        <input type="text" id="proanthocyanins" name="proanthocyanins" required><br><br>
+
+        <label for="color_intensity">Color Intensity:</label>
+        <input type="text" id="color_intensity" name="color_intensity" required><br><br>
+
+        <label for="hue">Hue:</label>
+        <input type="text" id="hue" name="hue" required><br><br>
+
+        <label for="od280/od315_of_diluted_wines">OD280/OD315 of Diluted Wines:</label>
+        <input type="text" id="od280/od315_of_diluted_wines" name="od280/od315_of_diluted_wines" required><br><br>
+
+        <label for="proline">Proline:</label>
+        <input type="text" id="proline" name="proline" required><br><br>
+
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if prediction_text %}
+        <h2>{{ prediction_text }}</h2>
+    {% endif %}
+</body>
+</html>
